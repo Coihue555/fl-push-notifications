@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "844101551110",
+    "project_id": "fl-pushing",
+    "storage_bucket": "fl-pushing.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844101551110:android:c9adb777a161ee50fe2f87",
+        "android_client_info": {
+          "package_name": "com.octarinecode.fl_pushing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "844101551110-v5epv09b4rp2q64kq943aab966og27tc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.octarinecode.fl_pushing",
+            "certificate_hash": "12b2fe5f268947a295b1172c91322f79e718ea82"
+          }
+        },
+        {
+          "client_id": "844101551110-md72f4hrvvkqu1b6ut4orbfnij6pgq14.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhcoH3pAnoO6oYBVxnAI3-lHKYNPjGw14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "844101551110-md72f4hrvvkqu1b6ut4orbfnij6pgq14.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,4 +1,4 @@
-package com.example.fl_pushing
+package com.octarinecode.fl_pushing
 
 import io.flutter.embedding.android.FlutterActivity
 

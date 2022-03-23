@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.fl_pushing">
+    package="com.octarinecode.fl_pushing">
    <application
         android:label="fl_pushing"
         android:name="${applicationName}"
