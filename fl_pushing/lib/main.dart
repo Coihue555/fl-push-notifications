@@ -1,5 +1,5 @@
-import 'package:fl_pushing/services/push_notification_service.dart';
 import 'package:flutter/material.dart';
+import 'package:fl_pushing/services/push_notification_service.dart';
 import 'package:fl_pushing/screens/home_screen.dart';
 import 'package:fl_pushing/screens/message_screen.dart';
 
@@ -17,10 +17,19 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
 
+  final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+  final GlobalKey<ScaffoldMessengerState> scaffoldKey = GlobalKey<ScaffoldMessengerState>();
+
   @override
   void initState() {
     
     super.initState();
+    PushNotificationService.messagesStream.listen((message) {
+
+      navigatorKey.currentState?.pushNamed('message', arguments: message);
+      final snackBar = SnackBar( content: Text(message));
+      scaffoldKey.currentState?.showSnackBar(snackBar);
+     });
   }
 
 
@@ -30,6 +39,8 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: 'Material App',
       initialRoute: 'home',
+      navigatorKey: navigatorKey, // Navegacion
+      scaffoldMessengerKey: scaffoldKey, //Snacks
       routes: {
         'home'    : ( _ ) => const HomeScreen(),
         'message' : ( _ ) => const MessageScreen(),

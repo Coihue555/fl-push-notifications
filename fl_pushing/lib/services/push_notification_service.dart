@@ -15,17 +15,20 @@ class PushNotificationService{
 
   static Future _backgroundHandler(RemoteMessage message) async {
     print('backgroundHandler: ${message.messageId}');
-    _messageStream.add(message.notification?.title ?? 'Sin titulo');
+    _messageStream.add(message.data['producto'] ?? 'no data');
+    print(message.data);
   }
 
   static Future _onMessagedHandler(RemoteMessage message) async {
     print('onMessagedHandler: ${message.messageId}');
-    _messageStream.add(message.notification?.title ?? 'Sin titulo');
+    _messageStream.add(message.data['producto'] ?? 'no data');
+    print(message.data);
   }
 
   static Future _onOpenMessageHandler(RemoteMessage message) async {
     print('onOpenMessage: ${message.messageId}');
-    _messageStream.add(message.notification?.title ?? 'Sin titulo');
+    _messageStream.add(message.data['producto'] ?? 'no data');
+    print(message.data);
   }
   
   //TODO video 277 Missing Default Notification Channel metadata in AndroidManifest. Default value will be used.
